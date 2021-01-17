@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class PajentContainer {
+public class PacjentContainer {
 
 	private List<Pacjent> pacjenci;
 
-	public PajentContainer() {
+	public PacjentContainer() {
 		this.pacjenci = new ArrayList<>();
 	}
 
@@ -13,4 +13,7 @@ public class PajentContainer {
 		this.pacjenci.add(pacjent);
 	}
 
+	public List<Pacjent> getPacjenci() {
+		return pacjenci;
+	}
 }

@@ -1,14 +1,15 @@
 public class Pacjent extends Osoba {
 
+    private String adres;
     private float saldo;
     private boolean ubezpieczenie;
 
-    public Pacjent(String imie, String nazwisko, String adres, String pesel, String nrTel, String haslo, float saldo, boolean ubezpieczenie) {
-        super(imie, nazwisko, adres, pesel, nrTel, haslo);
+    public Pacjent(String imie, String nazwisko, String pesel, String nrTel, String haslo, String adres, float saldo, boolean ubezpieczenie) {
+        super(imie, nazwisko, pesel, nrTel, haslo);
+        this.adres = adres;
         this.saldo = saldo;
         this.ubezpieczenie = ubezpieczenie;
     }
-
 
     public void printSaldo() {
         System.out.println("Towje saldo: " + saldo + "zl");
@@ -52,5 +53,18 @@ public class Pacjent extends Osoba {
         this.ubezpieczenie = ubezpieczenie;
     }
 
+    public String getAdres() {
+        return adres;
+    }
 
+    public void setAdres(String adres) {
+        this.adres = adres;
+    }
+
+    @Override
+    public String toString() {
+        return "Pacjent{" +
+                "adres='" + adres + '\'' +
+                "} " + super.toString();
+    }
 }

@@ -1,15 +1,13 @@
 public abstract class Osoba {
     private String imie;
     private String nazwisko;
-    private String adres;
     private String pesel;
     private String nrTel;
     private String haslo;
 
-    public Osoba(String imie, String nazwisko, String adres, String pesel, String nrTel, String haslo) {
+    public Osoba(String imie, String nazwisko, String pesel, String nrTel, String haslo) {
         this.imie = imie;
         this.nazwisko = nazwisko;
-        this.adres = adres;
         this.pesel = pesel;
         this.nrTel = nrTel;
         this.haslo = haslo;
@@ -35,14 +33,6 @@ public abstract class Osoba {
         this.nazwisko = nazwisko;
     }
 
-    public String getAdres() {
-        return adres;
-    }
-
-    public void setAdres(String adres) {
-        this.adres = adres;
-    }
-
     public String getPesel() {
         return pesel;
     }
@@ -65,5 +55,15 @@ public abstract class Osoba {
 
     public void setHaslo(String haslo) {
         this.haslo = haslo;
+    }
+
+    @Override
+    public String toString() {
+        return "Osoba{" +
+                "imie='" + imie + '\'' +
+                ", nazwisko='" + nazwisko + '\'' +
+                ", pesel='" + pesel + '\'' +
+                ", nrTel='" + nrTel + '\'' +
+                '}';
     }
 }

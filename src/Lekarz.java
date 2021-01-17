@@ -1,8 +1,8 @@
 public class Lekarz extends Osoba {
     private String specjalizacja;
 
-    public Lekarz(String imie, String nazwisko, String adres, String pesel, String nrTel, String haslo, String specjalizacja) {
-        super(imie, nazwisko, adres, pesel, nrTel, haslo);
+    public Lekarz(String imie, String nazwisko, String pesel, String nrTel, String haslo, String specjalizacja) {
+        super(imie, nazwisko, pesel, nrTel, haslo);
         this.specjalizacja = specjalizacja;
     }
 
@@ -32,5 +32,10 @@ public class Lekarz extends Osoba {
         this.specjalizacja = specjalizacja;
     }
 
-
+    @Override
+    public String toString() {
+        return "Lekarz{" +
+                "specjalizacja='" + specjalizacja + '\'' +
+                "} " + super.toString();
+    }
 }

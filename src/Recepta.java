@@ -3,13 +3,13 @@ import java.util.Date;
 public class Recepta {
     private String pacjentPesel;
     private String lekarzPesel;
-    private String lekarstwo;
+    private String lekarstwa;
     private Date dataWystawienia;
 
-    public Recepta(String pacjentPesel, String lekarzPesel, String lekarstwo, Date dataWystawienia) {
+    public Recepta(String pacjentPesel, String lekarzPesel, String lekarstwa, Date dataWystawienia) {
         this.pacjentPesel = pacjentPesel;
         this.lekarzPesel = lekarzPesel;
-        this.lekarstwo = lekarstwo;
+        this.lekarstwa = lekarstwa;
         this.dataWystawienia = dataWystawienia;
     }
 
@@ -29,12 +29,12 @@ public class Recepta {
         this.lekarzPesel = lekarzPesel;
     }
 
-    public String getLekarstwo() {
-        return lekarstwo;
+    public String getLekarstwa() {
+        return lekarstwa;
     }
 
-    public void setLekarstwo(String lekarstwo) {
-        this.lekarstwo = lekarstwo;
+    public void setLekarstwa(String lekarstwa) {
+        this.lekarstwa = lekarstwa;
     }
 
     public Date getDataWystawienia() {

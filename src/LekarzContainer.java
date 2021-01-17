@@ -12,4 +12,7 @@ public class LekarzContainer {
 		this.lekarze.add(lekarz);
 	}
 
+	public List<Lekarz> getLekarze() {
+		return lekarze;
+	}
 }
