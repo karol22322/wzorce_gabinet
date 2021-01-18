@@ -61,8 +61,8 @@ public class Wizyta {
         return "Wizyta{" +
                 ", lekarzPesel='" + lekarzPesel + '\'' +
                 ", opis='" + opis + '\'' +
-                ", dataWizyty=" + dataWizyty +
+                ", dataWizyty=" + dataWizyty.toString() +
                 ", godzinaWizyty=" + godzinaWizyty +
-                '}';
+                '}' + "\n";
     }
 }

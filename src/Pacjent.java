@@ -1,10 +1,10 @@
 public class Pacjent extends Osoba {
 
     private String adres;
-    private float saldo;
+    private double saldo;
     private boolean ubezpieczenie;
 
-    public Pacjent(String imie, String nazwisko, String pesel, String nrTel, String haslo, String adres, float saldo, boolean ubezpieczenie) {
+    public Pacjent(String imie, String nazwisko, String pesel, String nrTel, String haslo, String adres, double saldo, boolean ubezpieczenie) {
         super(imie, nazwisko, pesel, nrTel, haslo);
         this.adres = adres;
         this.saldo = saldo;
@@ -37,7 +37,7 @@ public class Pacjent extends Osoba {
 
     }
 
-    public float getSaldo() {
+    public double getSaldo() {
         return saldo;
     }
 

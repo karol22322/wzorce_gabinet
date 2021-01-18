@@ -44,4 +44,14 @@ public class Recepta {
     public void setDataWystawienia(Date dataWystawienia) {
         this.dataWystawienia = dataWystawienia;
     }
+
+    @Override
+    public String toString() {
+        return "Recepta{" +
+                "pacjentPesel='" + pacjentPesel + '\'' +
+                ", lekarzPesel='" + lekarzPesel + '\'' +
+                ", lekarstwa='" + lekarstwa + '\'' +
+                ", dataWystawienia=" + dataWystawienia +
+                '}' + "\n";
+    }
 }

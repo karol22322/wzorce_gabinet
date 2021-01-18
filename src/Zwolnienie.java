@@ -64,4 +64,16 @@ public class Zwolnienie {
     public void setDataZakonczenia(Date dataZakonczenia) {
         this.dataZakonczenia = dataZakonczenia;
     }
+
+    @Override
+    public String toString() {
+        return "Zwolnienie{" +
+                "pacjentPesel='" + pacjentPesel + '\'' +
+                ", lekarzPesel='" + lekarzPesel + '\'' +
+                ", opis='" + opis + '\'' +
+                ", dataWystawienia=" + dataWystawienia +
+                ", dataRozpoczecia=" + dataRozpoczecia +
+                ", dataZakonczenia=" + dataZakonczenia +
+                '}' + "\n";
+    }
 }

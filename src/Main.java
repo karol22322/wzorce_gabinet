@@ -76,7 +76,7 @@ public class Main {
 
     static void menuGlowne(String pesel, boolean isLekarz) {
 
-        System.out.println("----Logowanie----\n");
+        System.out.println("----MENU GLOWNE----\n");
         System.out.println("1. Wyswietl swoje dane.");
         System.out.println("2. Wyswietl moje wizyty.");
         System.out.println("3. Zaplanuj wizyte.");
@@ -87,6 +87,8 @@ public class Main {
         } else {
             System.out.println("5. Pokaż saldo.");
             System.out.println("6. Sprawdź ubezpiecznie.");
+            System.out.println("7. Pokaż recepty.");
+            System.out.println("8. Pokaż zwolnienia.");
         }
         System.out.println("\nPodaj numer komendy.\n");
 
@@ -163,6 +165,12 @@ public class Main {
                         System.out.println("Nie jesteś ubezpieczony.");
                     }
                     break;
+                case 7:
+                    System.out.println(Arrays.toString(dokumnety.getReceptyByPacjent(pesel).toArray()));
+                    break;
+                case 8:
+                    System.out.println(Arrays.toString(dokumnety.getZwolnieniaByPacjent(pesel).toArray()));
+                    break;
                 default:
                     System.out.println("Bledny numer komendy!! Wpisz ponownie.");
                     break;
@@ -178,9 +186,9 @@ public class Main {
         String drugiPesel = keyboard.next();
         System.out.println("Podaj opis: ");
         String opis = keyboard.next();
-        System.out.println("Podaj datę wizyty ('01/01/2000'): ");
+        System.out.println("Podaj datę wizyty (01/01/2000): ");
         String dataString = keyboard.next();
-        System.out.println("Podaj godzine wizyty: ");
+        System.out.println("Podaj godzine wizyty (08:30) ");
         String godzinaString = keyboard.next();
         Date data = null;
         Time godzina = null;
@@ -250,7 +258,7 @@ public class Main {
         String opis = keyboard.next();
         System.out.println("Podaj datę rozpoczecia ('01/01/2000'): ");
         String dataStartString = keyboard.next();
-        System.out.println("Podaj datę rozpoczecia ('01/01/2000'): ");
+        System.out.println("Podaj datę zakonczenia ('01/01/2000'): ");
         String dataKoniecString = keyboard.next();
 
         Date dataStart = null;
@@ -268,5 +276,19 @@ public class Main {
         System.out.println("Wystawiono zwolnienie");
     }
 
-}
+    public static Date StringToDate(String s){
 
+        Date result = null;
+        try{
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            result  = dateFormat.parse(s);
+        }
+
+        catch(ParseException e){
+            e.printStackTrace();
+
+        }
+        return result ;
+    }
+
+}
