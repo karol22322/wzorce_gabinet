@@ -31,7 +31,7 @@ public class Main {
                 logowanie();
                 break;
             case 2:
-//                zalozKonto();
+                zalozKonto();
                 break;
             default:
                 System.out.println("Bledny numer komendy!! Wpisz ponownie.");
@@ -73,6 +73,35 @@ public class Main {
         }
         logowanie();
     }
+
+    static void zalozKonto() {
+        System.out.println("----Zakładanie konta----\n");
+        System.out.println("Podaj pesel: ");
+        String pesel = keyboard.next();
+        System.out.println("Podaj haslo: ");
+        String password = keyboard.next();
+
+        Optional<Pacjent> pacjent = pacjenci.getPacjenci().stream()
+                .filter(pac -> pac.getPesel().equals(pesel))
+                .findAny();
+
+
+        if (pacjent.isPresent())
+            System.out.println("Konto pacjenta o podanym numerze PESEL już istnieje.");
+        else {
+            System.out.println("Podaj imię.");
+            String imie = keyboard.next();
+            System.out.println("Podaj nazwisko.");
+            String nazwisko = keyboard.next();
+            System.out.println("Podaj nr telefonu.");
+            String nrTel = keyboard.next();
+            System.out.println("Podaj adres zamieszkania.");
+            String adres = keyboard.next();
+            pacjenci.dodajPacjenta(new Pacjent(imie, nazwisko, pesel, nrTel, password, adres, 0.0, false));
+            start();
+        }
+    }
+
 
     static void menuGlowne(String pesel, boolean isLekarz) {
 

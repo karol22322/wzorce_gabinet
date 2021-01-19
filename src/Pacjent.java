@@ -12,7 +12,7 @@ public class Pacjent extends Osoba {
     }
 
     public void printSaldo() {
-        System.out.println("Towje saldo: " + saldo + "zl");
+        System.out.println("Twoje saldo: " + saldo + "zl");
     }
 
     public void plusSaldo(float kwota) {
