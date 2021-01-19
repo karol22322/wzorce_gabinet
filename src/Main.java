@@ -119,6 +119,7 @@ public class Main {
             System.out.println("7. Pokaż recepty.");
             System.out.println("8. Pokaż zwolnienia.");
         }
+        System.out.println("0. Wyloguj");
         System.out.println("\nPodaj numer komendy.\n");
 
         int wybor = keyboard.nextInt();
@@ -153,6 +154,9 @@ public class Main {
                     break;
                 case 6:
                     wystawZwolnienie(pesel);
+                    break;
+                case 0:
+                    start();
                     break;
                 default:
                     System.out.println("Bledny numer komendy!! Wpisz ponownie.");
@@ -199,6 +203,9 @@ public class Main {
                     break;
                 case 8:
                     System.out.println(Arrays.toString(dokumnety.getZwolnieniaByPacjent(pesel).toArray()));
+                    break;
+                case 0:
+                    start();
                     break;
                 default:
                     System.out.println("Bledny numer komendy!! Wpisz ponownie.");
@@ -256,12 +263,13 @@ public class Main {
         }
         System.out.println("Wybierz numer wizyty do usuniecia");
         int numer = keyboard.nextInt();
-
+        Wizyta wizyta;
         if (isLekarz) {
-            wizytyLekarza.remove(numer - 1);
+            wizyta = wizytyLekarza.get(numer - 1);
         }else{
-            wizytyPacjenta.remove(numer - 1);
+            wizyta = wizytyPacjenta.get(numer - 1);
         }
+        wizyty.usunWizyta(wizyta);
         System.out.println("Usunięto wizyte");
 
     }

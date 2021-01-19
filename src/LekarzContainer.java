@@ -6,8 +6,8 @@ public class LekarzContainer {
 
 	public LekarzContainer() {
 		this.lekarze = new ArrayList<>();
-		this.lekarze.add(new Lekarz("Tomek","Lekarski", "003", "4634", "admin", "Ortopeda"));
-		this.lekarze.add(new Lekarz("Wojtek","Doktorant", "004", "4634", "admin", "Chirurg"));
+		this.lekarze.add(new Lekarz("Tomek","Lekarski", "101", "4634", "admin", "Ortopeda"));
+		this.lekarze.add(new Lekarz("Wojtek","Doktorant", "102", "4634", "admin", "Chirurg"));
 	}
 
 	public void dodajLekarza( Lekarz lekarz){

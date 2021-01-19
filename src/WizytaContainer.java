@@ -19,6 +19,10 @@ public class WizytaContainer {
 		this.wizyty.add(wizyta);
 	}
 
+	public void usunWizyta(Wizyta wizyta){
+		this.wizyty.remove(wizyta);
+	}
+
 	public List<Wizyta> getWizyty() {
 		return wizyty;
 	}
